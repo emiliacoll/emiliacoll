@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "Figure Figure Figure Figure"
+            "button_3 button_3 button_4 button_4"
+            "button_1 button_1 button_2 button_2";
+        }
+
+        .button_1 { grid-area: button_1; }
+
+        .button_2 { grid-area: button_2; }
+
+        .button_3 { grid-area: button_3; }
+
+        .button_4 { grid-area: button_4; }
+
+        .Figure { grid-area: Figure; }
+
+        .full-size-svg {
+                width: 100%;
+                height: 100%;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="button_1">
+            <svg width="200" height="200">
+            <circle cx="50" cy="50" r="40" fill="yellow" stroke="orange"/>
+            </svg>
+        </div>
+        <div class="button_2">
+            <svg width="200" height="200">
+            <circle cx="110" cy="110" r="30" fill="blue"/>
+            </svg>
+        </div>
+        <div class="button_3">
+            <svg width="200" height="200">
+            <line x1="0" y1="200" x2="500" y2=200 stroke="green"/>
+            </svg>
+        </div>
+        <div class="button_4">
+            <svg width="200" height="200">
+            <circle cx="230" cy="190" r="3" fill="purple"/>
+            </svg>
+        </div>
+        <div class="Figure">
+            <svg width="200" height="200">
+            <line x1="0" y1="200" x2="500" y2=200 stroke="green"/>
+            </svg>
+        </div>
+        <div id="coloured-div"></div>
+    </div>
+    
+</body>
+</html>
